@@ -137,6 +137,12 @@ app_license = "agpl-3.0"
 # ---------------
 # Hook on document methods and events
 
+doc_events = {
+    "POS Invoice": {
+        "on_submit": "mpesa_integration.mpesa_integration.mpesa_settings.verify_and_update_payment"
+    }
+}
+
 # doc_events = {
 # 	"*": {
 # 		"on_update": "method",
@@ -166,6 +172,11 @@ app_license = "agpl-3.0"
 # 	],
 # }
 
+scheduler_events = {
+    "all": [
+        "mpesa_integration.mpesa_integration.mpesa_settings.check_pending_payments"
+    ]
+}
 # Testing
 # -------
 

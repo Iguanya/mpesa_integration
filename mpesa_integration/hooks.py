@@ -177,6 +177,7 @@ scheduler_events = {
         "mpesa_integration.mpesa_integration.mpesa_settings.check_pending_payments"
     ]
 }
+
 # Testing
 # -------
 
